@@ -12,12 +12,12 @@ const ProjectGrid = ({ t, isDark, lang }) => {
               : 'bg-white border-neutral-200 hover:border-red-500/50 hover:shadow-red-600/10'
           }`}
         >
-          {/* Image Container */}
-          <div className={`aspect-[4/3] relative overflow-hidden border-b ${isDark ? 'border-neutral-800' : 'border-neutral-200'}`}>
+          {/* Image Container - Full view with rounded corners */}
+          <div className={`aspect-[4/3] relative overflow-hidden rounded-t-3xl border-b ${isDark ? 'border-neutral-800 bg-neutral-950 flex items-center justify-center p-3' : 'border-neutral-200 bg-neutral-100 flex items-center justify-center p-3'}`}>
             <img 
               src={`/project${index + 1}.jpg`}
               alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-full object-contain rounded-lg shadow-md transition-transform duration-700 group-hover:scale-105"
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Qcm9qZWN0IEltYWdlPC90ZXh0Pjwvc3ZnPg==';
