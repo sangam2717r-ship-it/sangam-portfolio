@@ -74,6 +74,8 @@ export const content = {
     },
     skillsSection: {
       heading: "Skills & Expertise",
+      strategyHeading: "STRATEGY & MANAGEMENT",
+      toolsHeading: "TOOLS & PLATFORMS",
       categories: {
         strategy: ["Project Management", "Systems Architecture", "Problem Solving", "Process Automation"],
         tools: ["React", "JavaScript", "Python", "Tailwind CSS", "Firebase", "Node.js", "Git/GitHub"]
@@ -109,16 +111,21 @@ export const content = {
         link: "#"
       }
     ],
-   contactSection: {
+    contactSection: {
       heading: "Ready to Build Something Exceptional?",
       subtitle: "Drop me a line about your next digital platform or infrastructural project.",
+      formLabels: {
+        name: "Name",
+        email: "Email",
+        message: "Message"
+      },
       namePlaceholder: "Your name",
       emailPlaceholder: "your.email@example.com",
       messagePlaceholder: "Tell me about your project requirements...",
       submitBtn: "Send Message"
     }
   },
- np: {
+  np: {
     logoName: "संगम.गैरे",
     nav: {
       about: "मेरो बारेमा",
@@ -142,7 +149,7 @@ export const content = {
       p1: "भौतिक पूर्वाधार र डिजिटल आर्किटेक्चर बीचको खाडल पुर्दै। म फुल-स्ट्याक वेब एप्लिकेसनहरू इन्जिनियर गर्छु र सिड्नीमा जटिल अपरेसनहरू व्यवस्थापन गर्छु।",
       p2: "डिजिटल प्रणालीहरू जसले सही रूपमा काम मात्र गर्दैन, अर्थ पनि दिन्छ। डाटाबेस वास्तुकला डिजाइनदेखि प्राविधिक कार्यान्वयनसम्मको मेरो अनुभव छ।"
     },
-educationSection: {
+    educationSection: {
       heading: "शिक्षा",
       items: [
         {
@@ -183,7 +190,7 @@ educationSection: {
         },
         {
           title: "UI/UX आर्किटेक्चर",
-          desc: "प्रयोगकर्ताहरूलाई आकर्षित गर्ने आकर्षक र सहज डिजाइन तयार गर्ने।"
+          desc: "प्रयोगकर्तालाई सहज हुने र हेर्दा उत्कृष्ट देखिने डिजिटल डिजाइन तयार गर्ने।"
         },
         {
           title: "सिस्टम अपरेसन",
@@ -193,6 +200,8 @@ educationSection: {
     },
     skillsSection: {
       heading: "सीप र विशेषज्ञता",
+      strategyHeading: "रणनीति र व्यवस्थापन",
+      toolsHeading: "उपकरण र प्लेटफर्महरू",
       categories: {
         strategy: ["प्रोजेक्ट व्यवस्थापन", "सिस्टम आर्किटेक्चर", "समस्या समाधान", "प्रोसेस अटोमेसन"],
         tools: ["React", "JavaScript", "Python", "Tailwind CSS", "Firebase", "Node.js", "Git/GitHub"]
@@ -200,14 +209,14 @@ educationSection: {
     },
     projectsSection: {
       heading: "विशेष प्रोजेक्टहरू",
-      subtitle: "उत्पादन निर्माण, फुल-स्ट्याक एप्लिकेसनहरू र प्राविधिक समाधानहरूको सङ्ग्रह।"
+      subtitle: "डिजिटल प्रडक्ट, फुल-स्ट्याक एप्लिकेसन र प्राविधिक समाधानहरूको सङ्ग्रह।"
     },
     projects: [
       {
         id: 1,
         title: "न्यू चितवन ड्राइभिङ ट्रेनिङ सेन्टर",
         category: "लाइभ वेब अप",
-        desc: "सुरक्षित एड्मिन लगइन प्यानल, स्वचालित बुकिङ शेडुलिङ र कस्टम परीक्षा तयारी पाइपलाइन भएको प्लेटफर्म।",
+        desc: "सुरक्षित एडमिन प्यानल, अनलाइन बुकिङ प्रणाली र सवारी चालक अनुमतिपत्र (लाइसेन्स) तयारीको लागि बनाइएको वेब प्लेटफर्म।",
         tech: ["React", "Python", "Firebase"],
         link: "https://newchitwandriving.com"
       },
@@ -215,7 +224,7 @@ educationSection: {
         id: 2,
         title: "AAFAI Rentals",
         category: "फुल-स्ट्याक प्लेटफर्म",
-        desc: "युजर अथेन्टिकेसन, एड्मिन अनुमोदन र सुरक्षित फोटो अपलोड व्यवस्थापनसहितको कमर्सियल प्लेटफर्म।",
+        desc: "सुरक्षित फोटो अपलोड र पूर्ण एडमिन कन्ट्रोलसहितको कमर्सियल रेन्टल प्लेटफर्म।",
         tech: ["React", "Node.js", "Database"],
         link: "#"
       },
@@ -223,14 +232,19 @@ educationSection: {
         id: 3,
         title: "TypeShallus",
         category: "वेब एप्लिकेसन",
-        desc: "लोक सेवाका उम्मेदवारहरूका लागि प्रिइटी फन्ट किबोर्ड मपिङ समाधान गर्ने विशेष टाइपिङ वेब एप्लिकेसन।",
+        desc: "लोक सेवा तयारी गर्ने उम्मेदवारहरूका लागि प्रिती फन्टमा आधारित विशेष टाइपिङ वेब एप्लिकेसन।",
         tech: ["JavaScript", "DOM Architecture", "UI/UX"],
         link: "#"
       }
     ],
-   contactSection: {
+    contactSection: {
       heading: "केही उत्कृष्ट निर्माण गर्न तयार हुनुहुन्छ?",
-      subtitle: "तपाईंको अर्को डिजिटल वा पूर्वाधार प्रोजेक्टको बारेमा मलाई जानकारी दिनुहोस्।",
+      subtitle: "तपाईंको नयाँ प्रोजेक्ट वा आइडियाको बारेमा सँगै छलफल गरौं।",
+      formLabels: {
+        name: "नाम",
+        email: "ईमेल",
+        message: "सन्देश"
+      },
       namePlaceholder: "तपाईंको नाम",
       emailPlaceholder: "तपाईंको ईमेल",
       messagePlaceholder: "तपाईंको प्रोजेक्टको आवश्यकताहरू बारे बताउनुहोस्...",

@@ -2,17 +2,12 @@ import React from 'react';
 
 const Contact = ({ t, isDark }) => {
   return (
-    <div className="w-full">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
-        
-        {/* Contact Information & Copy */}
-        <div>
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-            {t.contactSection.heading}
-          </h2>
-          <p className={`text-lg leading-relaxed mb-8 ${isDark ? 'text-neutral-400' : 'text-neutral-600'}`}>
-            {t.contactSection.subtitle}
-          </p>
+    <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto pb-20">
+      <div>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">{t.contactSection.heading}</h2>
+        <p className={`text-lg mb-8 ${isDark ? 'text-neutral-400' : 'text-neutral-600'}`}>
+          {t.contactSection.subtitle}
+        </p>
           
          <div className="flex gap-4">
             {/* LinkedIn */}
@@ -31,60 +26,47 @@ const Contact = ({ t, isDark }) => {
           </div>
         </div>
 
-        {/* Contact Form Connected to Web3Forms */}
-        <div className={`p-8 rounded-3xl border ${isDark ? 'bg-[#121212] border-neutral-800' : 'bg-white border-neutral-200 shadow-sm'}`}>
-          <form action="https://api.web3forms.com/submit" method="POST" className="flex flex-col gap-5">
-            
-            {/*  YOUR ACCESS KEY HERE */}
-            <input type="hidden" name="access_key" value="a96b0417-e945-4110-a82d-913b8097c5c3" />
-
-            <div>
-              <label className={`block text-sm font-semibold mb-2 ${isDark ? 'text-neutral-300' : 'text-neutral-700'}`}>Name</label>
-              <input 
-                type="text" 
-                name="name"
-                required
-                placeholder={t.contactSection.namePlaceholder}
-                className={`w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors ${isDark ? 'bg-neutral-900 border-neutral-800 text-white placeholder-neutral-600' : 'bg-neutral-50 border-neutral-300 text-neutral-900 placeholder-neutral-400'}`}
-              />
-            </div>
-            
-            <div>
-              <label className={`block text-sm font-semibold mb-2 ${isDark ? 'text-neutral-300' : 'text-neutral-700'}`}>Email</label>
-              <input 
-                type="email" 
-                name="email"
-                required
-                placeholder={t.contactSection.emailPlaceholder}
-                className={`w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors ${isDark ? 'bg-neutral-900 border-neutral-800 text-white placeholder-neutral-600' : 'bg-neutral-50 border-neutral-300 text-neutral-900 placeholder-neutral-400'}`}
-              />
-            </div>
-
-            <div>
-              <label className={`block text-sm font-semibold mb-2 ${isDark ? 'text-neutral-300' : 'text-neutral-700'}`}>Message</label>
-              <textarea 
-                name="message"
-                required
-                rows="4"
-                placeholder={t.contactSection.messagePlaceholder}
-                className={`w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors resize-none ${isDark ? 'bg-neutral-900 border-neutral-800 text-white placeholder-neutral-600' : 'bg-neutral-50 border-neutral-300 text-neutral-900 placeholder-neutral-400'}`}
-              ></textarea>
-            </div>
-
-            <button 
-              type="submit"
-              className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 rounded-xl transition-all shadow-lg shadow-indigo-600/20 mt-2"
-            >
-              {t.contactSection.submitBtn}
-            </button>
-          </form>
+      <form className={`p-8 rounded-3xl border shadow-xl ${isDark ? 'bg-[#1a1a1a] border-neutral-800' : 'bg-white border-neutral-200'}`}>
+        <div className="space-y-6">
+          <div className="relative">
+            {/* Dynamic Label Translation */}
+            <label className={`absolute -top-2.5 left-4 px-1 text-xs font-semibold ${isDark ? 'bg-[#1a1a1a] text-neutral-400' : 'bg-white text-neutral-500'}`}>
+              {t.contactSection.formLabels?.name || "Name"}
+            </label>
+            <input 
+              type="text" 
+              placeholder={t.contactSection.namePlaceholder}
+              className={`w-full p-4 rounded-xl border focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600 transition-all ${isDark ? 'bg-[#121212] border-neutral-700 text-white placeholder-neutral-600' : 'bg-neutral-50 border-neutral-300 text-neutral-900 placeholder-neutral-400'}`}
+            />
+          </div>
+          <div className="relative">
+            {/* Dynamic Label Translation */}
+            <label className={`absolute -top-2.5 left-4 px-1 text-xs font-semibold ${isDark ? 'bg-[#1a1a1a] text-neutral-400' : 'bg-white text-neutral-500'}`}>
+              {t.contactSection.formLabels?.email || "Email"}
+            </label>
+            <input 
+              type="email" 
+              placeholder={t.contactSection.emailPlaceholder}
+              className={`w-full p-4 rounded-xl border focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600 transition-all ${isDark ? 'bg-[#121212] border-neutral-700 text-white placeholder-neutral-600' : 'bg-neutral-50 border-neutral-300 text-neutral-900 placeholder-neutral-400'}`}
+            />
+          </div>
+          <div className="relative">
+            {/* Dynamic Label Translation */}
+            <label className={`absolute -top-2.5 left-4 px-1 text-xs font-semibold ${isDark ? 'bg-[#1a1a1a] text-neutral-400' : 'bg-white text-neutral-500'}`}>
+              {t.contactSection.formLabels?.message || "Message"}
+            </label>
+            <textarea 
+              rows="4" 
+              placeholder={t.contactSection.messagePlaceholder}
+              className={`w-full p-4 rounded-xl border focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600 transition-all ${isDark ? 'bg-[#121212] border-neutral-700 text-white placeholder-neutral-600' : 'bg-neutral-50 border-neutral-300 text-neutral-900 placeholder-neutral-400'}`}
+            ></textarea>
+          </div>
+          {/* Red Submit Button */}
+          <button className="w-full py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition-colors shadow-lg shadow-red-600/20">
+            {t.contactSection.submitBtn}
+          </button>
         </div>
-      </div>
-
-      {/* Footer */}
-      <div className={`py-8 text-center text-sm border-t ${isDark ? 'border-neutral-800 text-neutral-500' : 'border-neutral-200 text-neutral-400'}`}>
-        <p>&copy; {new Date().getFullYear()} Sangam Gaire. All rights reserved.</p>
-      </div>
+      </form>
     </div>
   );
 };
