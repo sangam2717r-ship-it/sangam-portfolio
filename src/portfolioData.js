@@ -1,5 +1,6 @@
 export const content = {
   en: {
+    logoName: "SANGAM.GAIRE",
     nav: {
       about: "About",
       experience: "Experience",
@@ -108,16 +109,17 @@ export const content = {
         link: "#"
       }
     ],
-    contactSection: {
-      heading: "Let's Create Something Amazing Together",
-      subtitle: "Whether you're looking to build a platform, launch a system, or explore creative collaboration, let's connect!",
+   contactSection: {
+      heading: "Ready to Build Something Exceptional?",
+      subtitle: "Drop me a line about your next digital platform or infrastructural project.",
       namePlaceholder: "Your name",
       emailPlaceholder: "your.email@example.com",
-      messagePlaceholder: "Tell me about your project...",
-      submitBtn: "Submit"
+      messagePlaceholder: "Tell me about your project requirements...",
+      submitBtn: "Send Message"
     }
   },
-  np: {
+ np: {
+    logoName: "संगम.गैरे",
     nav: {
       about: "मेरो बारेमा",
       experience: "अनुभव",
@@ -226,13 +228,13 @@ educationSection: {
         link: "#"
       }
     ],
-    contactSection: {
-      heading: "आउनुहोस्, सँगै केही उत्कृष्ट सिर्जना गरौं",
-      subtitle: "यदि तपाईं कुनै प्लेटफर्म बनाउन, प्रणाली लन्च गर्न वा रचनात्मक सहकार्य गर्न चाहनुहुन्छ भने, सम्पर्क गर्नुहोस्!",
+   contactSection: {
+      heading: "केही उत्कृष्ट निर्माण गर्न तयार हुनुहुन्छ?",
+      subtitle: "तपाईंको अर्को डिजिटल वा पूर्वाधार प्रोजेक्टको बारेमा मलाई जानकारी दिनुहोस्।",
       namePlaceholder: "तपाईंको नाम",
       emailPlaceholder: "तपाईंको ईमेल",
-      messagePlaceholder: "तपाईंको प्रोजेक्टको बारेमा बताउनुहोस्...",
-      submitBtn: "पठाउनुहोस्"
+      messagePlaceholder: "तपाईंको प्रोजेक्टको आवश्यकताहरू बारे बताउनुहोस्...",
+      submitBtn: "सन्देश पठाउनुहोस्"
     }
   }
 };

@@ -12,13 +12,18 @@ const Navbar = ({ lang, setLang, theme, setTheme, t }) => {
     { name: t.nav.contact, href: '#contact' },
   ];
 
+  // Fallback in case logoName isn't in portfolioData.js yet
+  const logoFirst = t.logoName ? t.logoName.split('.')[0] : (lang === 'en' ? 'SANGAM' : 'संगम');
+  const logoSecond = t.logoName ? t.logoName.split('.')[1] : (lang === 'en' ? 'GAIRE' : 'गैरे');
+
   return (
     <nav className={`fixed top-0 w-full z-50 transition-colors duration-300 border-b backdrop-blur-md ${isDark ? 'bg-[#0a0a0a]/80 border-neutral-800' : 'bg-neutral-50/80 border-neutral-200'}`}>
-      <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-        
-        {/* Logo */}
-        <a href="#" className="text-xl font-bold tracking-wider hover:opacity-80 transition-opacity">
-          SANGAM<span className="text-indigo-500">.GAIRE</span>
+      <div className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+  
+        {/* Translatable Logo with Red Theme */}
+        <a href="#" className="text-2xl font-bold tracking-wider">
+          <span className={isDark ? 'text-white' : 'text-neutral-900'}>{logoFirst}.</span>
+          <span className="text-red-600">{logoSecond}</span>
         </a>
         
         {/* Desktop Navigation */}
@@ -28,7 +33,7 @@ const Navbar = ({ lang, setLang, theme, setTheme, t }) => {
               <a 
                 key={index} 
                 href={link.href}
-                className={`text-sm font-semibold transition-colors hover:text-indigo-500 ${isDark ? 'text-neutral-300' : 'text-neutral-700'}`}
+                className={`text-sm font-semibold transition-colors hover:text-red-600 ${isDark ? 'text-neutral-300' : 'text-neutral-700'}`}
               >
                 {link.name}
               </a>
@@ -39,7 +44,7 @@ const Navbar = ({ lang, setLang, theme, setTheme, t }) => {
             {/* Theme Toggle */}
             <button 
               onClick={() => setTheme(isDark ? 'light' : 'dark')}
-              className={`p-2 rounded-lg text-sm font-semibold border transition-colors cursor-pointer ${isDark ? 'bg-neutral-900 border-neutral-700 text-white hover:border-indigo-500' : 'bg-white border-neutral-300 text-neutral-800 hover:border-indigo-500'}`}
+              className={`p-2 rounded-lg text-sm font-semibold border transition-colors cursor-pointer ${isDark ? 'bg-neutral-900 border-neutral-700 text-white hover:border-red-600' : 'bg-white border-neutral-300 text-neutral-800 hover:border-red-600'}`}
               title="Toggle Theme"
             >
               {isDark ? '☀️' : '🌙'}
@@ -48,16 +53,25 @@ const Navbar = ({ lang, setLang, theme, setTheme, t }) => {
             {/* Language Toggle */}
             <button 
               onClick={() => setLang(lang === 'en' ? 'np' : 'en')}
-              className={`px-3 py-2 rounded-lg text-sm font-semibold border transition-colors cursor-pointer ${isDark ? 'bg-neutral-900 border-neutral-700 text-white hover:border-indigo-500' : 'bg-white border-neutral-300 text-neutral-800 hover:border-indigo-500'}`}
+              className={`px-3 py-2 rounded-lg text-sm font-semibold border transition-colors cursor-pointer ${isDark ? 'bg-neutral-900 border-neutral-700 text-white hover:border-red-600' : 'bg-white border-neutral-300 text-neutral-800 hover:border-red-600'}`}
             >
               {t.nav.toggleLang}
             </button>
           </div>
         </div>
 
-        {/* Mobile Controls (Menu Toggle & Theme) */}
-        <div className="flex items-center gap-3 md:hidden">
-           <button 
+        {/* Mobile Controls (Lang Toggle, Theme, Menu) */}
+        <div className="flex items-center gap-2 md:hidden">
+          {/* Mobile Language Toggle */}
+          <button 
+            onClick={() => setLang(lang === 'en' ? 'np' : 'en')}
+            className={`px-2 py-2 rounded-lg text-xs font-bold border transition-colors ${isDark ? 'bg-neutral-900 border-neutral-700 text-white' : 'bg-white border-neutral-300 text-neutral-800'}`}
+          >
+            {lang === 'en' ? 'NP' : 'EN'}
+          </button>
+
+          {/* Mobile Theme Toggle */}
+          <button 
             onClick={() => setTheme(isDark ? 'light' : 'dark')}
             className={`p-2 rounded-lg text-sm font-semibold border transition-colors cursor-pointer ${isDark ? 'bg-neutral-900 border-neutral-700 text-white' : 'bg-white border-neutral-300 text-neutral-800'}`}
           >
@@ -88,22 +102,11 @@ const Navbar = ({ lang, setLang, theme, setTheme, t }) => {
                 key={index} 
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`text-base font-medium transition-colors hover:text-indigo-500 ${isDark ? 'text-neutral-300' : 'text-neutral-700'}`}
+                className={`text-base font-medium transition-colors hover:text-red-600 ${isDark ? 'text-neutral-300' : 'text-neutral-700'}`}
               >
                 {link.name}
               </a>
             ))}
-            <div className="pt-4 border-t border-neutral-500/30">
-               <button 
-                onClick={() => {
-                  setLang(lang === 'en' ? 'np' : 'en');
-                  setIsOpen(false);
-                }}
-                className={`w-full py-2 rounded-lg text-sm font-semibold border transition-colors cursor-pointer ${isDark ? 'bg-neutral-900 border-neutral-700 text-white' : 'bg-white border-neutral-300 text-neutral-800'}`}
-              >
-                Switch to {t.nav.toggleLang}
-              </button>
-            </div>
           </div>
         </div>
       )}
