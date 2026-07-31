@@ -121,7 +121,7 @@ function App() {
           </p>
         </div>
         
-        <ProjectGrid t={t} isDark={isDark} /> 
+       <ProjectGrid t={t} isDark={isDark} lang={lang} />
       </section>
 
       {/* Contact Section */}

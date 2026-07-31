@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectGrid = ({ t, isDark }) => {
+const ProjectGrid = ({ t, isDark, lang }) => {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {t.projectsSection.items.map((project, index) => (
