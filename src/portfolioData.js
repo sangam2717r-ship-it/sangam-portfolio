@@ -204,7 +204,7 @@ export const content = {
       toolsHeading: "उपकरण र प्लेटफर्महरू",
       categories: {
         strategy: ["प्रोजेक्ट व्यवस्थापन", "सिस्टम आर्किटेक्चर", "समस्या समाधान", "प्रोसेस अटोमेसन"],
-        tools: ["React", "JavaScript", "Python", "Tailwind CSS", "Firebase", "Node.js", "Git/GitHub"]
+        tools: ["React", "JavaScript", "Python", "Tailwind CSS", "Firebase","Supabase", "Node.js", "Git/GitHub"]
       }
     },
     projectsSection: {
@@ -225,7 +225,7 @@ export const content = {
         title: "आफै रेन्टल्स",
         category: "फुल-स्ट्याक प्लेटफर्म",
         desc: "सुरक्षित फोटो अपलोड र पूर्ण एडमिन कन्ट्रोलसहितको कमर्सियल रेन्टल प्लेटफर्म।",
-        tech: ["React", "Node.js", "Database"],
+        tech: ["React", "Node.js", "Supabase"],
         link: "#"
       },
       {
