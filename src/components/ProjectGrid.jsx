@@ -3,7 +3,7 @@ import React from 'react';
 const ProjectGrid = ({ t, isDark, lang }) => {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {t.projectsSection.items.map((project, index) => (
+      {t.projects.map((project, index) => (
         <div 
           key={index} 
           className={`group flex flex-col rounded-3xl border overflow-hidden transition-all hover:-translate-y-1 hover:shadow-2xl ${
