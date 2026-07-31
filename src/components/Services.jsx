@@ -10,9 +10,9 @@ const Services = ({ t, isDark }) => {
           {t.servicesSection.items.map((service, idx) => (
             <div 
               key={idx}
-              className={`p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-2 group ${isDark ? 'bg-[#121212] border-neutral-800 hover:border-indigo-500' : 'bg-white border-neutral-200 shadow-sm hover:border-indigo-500 hover:shadow-lg'}`}
+              className={`p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-2 group ${isDark ? 'bg-[#121212] border-neutral-800 hover:border-red-600' : 'bg-white border-neutral-200 shadow-sm hover:border-red-600 hover:shadow-lg'}`}
             >
-              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors ${isDark ? 'bg-indigo-500/10 text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white' : 'bg-indigo-100 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white'}`}>
+              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors ${isDark ? 'bg-red-600/10 text-indigo-400 group-hover:bg-red-600 group-hover:text-white' : 'bg-indigo-100 text-red-700 group-hover:bg-red-700 group-hover:text-white'}`}>
                 {/* Dynamic Icon rendering based on index */}
                 {idx === 0 ? (
                   <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
@@ -45,7 +45,7 @@ const Services = ({ t, isDark }) => {
               {t.skillsSection.categories.strategy.map((skill, idx) => (
                 <span 
                   key={idx} 
-                  className={`px-5 py-2.5 rounded-full text-sm font-medium border transition-colors hover:border-indigo-500 ${isDark ? 'bg-[#121212] border-neutral-800 text-neutral-300' : 'bg-white border-neutral-200 text-neutral-700 shadow-sm'}`}
+                  className={`px-5 py-2.5 rounded-full text-sm font-medium border transition-colors hover:border-red-600 ${isDark ? 'bg-[#121212] border-neutral-800 text-neutral-300' : 'bg-white border-neutral-200 text-neutral-700 shadow-sm'}`}
                 >
                   {skill}
                 </span>
@@ -62,7 +62,7 @@ const Services = ({ t, isDark }) => {
               {t.skillsSection.categories.tools.map((skill, idx) => (
                 <span 
                   key={idx} 
-                  className={`px-5 py-2.5 rounded-full text-sm font-medium border transition-colors hover:border-indigo-500 ${isDark ? 'bg-[#121212] border-neutral-800 text-neutral-300' : 'bg-white border-neutral-200 text-neutral-700 shadow-sm'}`}
+                  className={`px-5 py-2.5 rounded-full text-sm font-medium border transition-colors hover:border-red-600 ${isDark ? 'bg-[#121212] border-neutral-800 text-neutral-300' : 'bg-white border-neutral-200 text-neutral-700 shadow-sm'}`}
                 >
                   {skill}
                 </span>

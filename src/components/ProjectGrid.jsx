@@ -51,11 +51,18 @@ const ProjectGrid = ({ t, isDark, lang }) => {
               ))}
             </div>
 
-            {/* Visit Link - Updated to Red */}
-            <a href="#" className="inline-flex items-center text-sm font-bold text-red-500 hover:text-red-400 transition-colors mt-auto">
-              {lang === 'np' ? 'प्रत्यक्ष साइट हेर्नुहोस्' : 'Visit Live Site'} 
-              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-            </a>
+            {/* Visit Link - Conditionally Rendered */}
+            {project.link && project.link !== "#" && (
+              <a 
+                href={project.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-sm font-bold text-red-500 hover:text-red-400 transition-colors mt-auto"
+              >
+                {lang === 'np' ? 'प्रत्यक्ष साइट हेर्नुहोस्' : 'Visit Live Site'} 
+                <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            )}
           </div>
         </div>
       ))}
