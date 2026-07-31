@@ -12,17 +12,26 @@ const ProjectGrid = ({ t, isDark, lang }) => {
               : 'bg-white border-neutral-200 hover:border-red-500/50 hover:shadow-red-600/10'
           }`}
         >
-          {/* Image Container - Full view with rounded corners */}
-          <div className={`aspect-[4/3] relative overflow-hidden rounded-t-3xl border-b ${isDark ? 'border-neutral-800 bg-neutral-950 flex items-center justify-center p-3' : 'border-neutral-200 bg-neutral-100 flex items-center justify-center p-3'}`}>
-            <img 
-              src={`/project${index + 1}.jpg`}
-              alt={project.title}
-              className="w-full h-full object-contain rounded-lg shadow-md transition-transform duration-700 group-hover:scale-105"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Qcm9qZWN0IEltYWdlPC90ZXh0Pjwvc3ZnPg==';
-              }}
-            />
+          {/* Image Container - Browser Mockup Style */}
+          <div className={`p-4 pb-2 border-b ${isDark ? 'border-neutral-800 bg-neutral-900' : 'border-neutral-200 bg-neutral-100'}`}>
+            {/* Fake browser dots */}
+            <div className="flex items-center gap-1.5 mb-3">
+              <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
+            </div>
+            {/* The screenshot with rounded corners, showing 100% of the top title */}
+            <div className="overflow-hidden rounded-xl border border-neutral-700/30 shadow-inner">
+              <img 
+                src={`/project${index + 1}.jpg`}
+                alt={project.title}
+                className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Qcm9qZWN0IEltYWdlPC90ZXh0Pjwvc3ZnPg==';
+                }}
+              />
+            </div>
           </div>
 
           {/* Content Container */}
