@@ -60,8 +60,8 @@ const ProjectGrid = ({ t, isDark, lang }) => {
               ))}
             </div>
 
-            {/* Visit Link - Conditionally Rendered */}
-            {project.link && project.link !== "#" && (
+            {/* Conditional Rendering: Live Link vs Status Badge */}
+            {project.link && project.link !== "#" ? (
               <a 
                 href={project.link} 
                 target="_blank" 
@@ -71,7 +71,14 @@ const ProjectGrid = ({ t, isDark, lang }) => {
                 {lang === 'np' ? 'प्रत्यक्ष साइट हेर्नुहोस्' : 'Visit Live Site'} 
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </a>
-            )}
+            ) : project.status ? (
+              <div className="inline-flex items-center gap-2 mt-auto pt-2">
+                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                <span className={`text-xs font-semibold uppercase tracking-wider ${isDark ? 'text-amber-400/90' : 'text-amber-600'}`}>
+                  {project.status}
+                </span>
+              </div>
+            ) : null}
           </div>
         </div>
       ))}

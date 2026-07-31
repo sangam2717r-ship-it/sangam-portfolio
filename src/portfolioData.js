@@ -98,6 +98,7 @@ export const content = {
         id: 2,
         title: "AAFAI Rentals",
         category: "Full-Stack Platform",
+        status: "Ongoing Development",
         desc: "Commercial car rental platform featuring user authentication workflows, secure image upload management, and admin routing.",
         tech: ["React", "Next.js", "Node.js", "Supabase"],
         link: "#"
@@ -106,6 +107,7 @@ export const content = {
         id: 3,
         title: "TypeShallus",
         category: "Web Application",
+        status: "Ongoing Development",
         desc: "Specialized typing web application tailored for Loksewa candidates, solving complex legacy Preeti font keyboard input mappings.",
         tech: ["JavaScript", "DOM Architecture", "UI/UX"],
         link: "#"
@@ -224,6 +226,7 @@ export const content = {
         id: 2,
         title: "आफै रेन्टल्स",
         category: "फुल-स्ट्याक प्लेटफर्म",
+        status: "विकासको क्रममा",
         desc: "सुरक्षित फोटो अपलोड र पूर्ण एडमिन कन्ट्रोलसहितको कमर्सियल रेन्टल प्लेटफर्म।",
         tech: ["React", "Next.js", "Node.js", "Supabase"],
         link: "#"
@@ -232,6 +235,7 @@ export const content = {
         id: 3,
         title: "टाइपसालअस्",
         category: "वेब एप्लिकेसन",
+        status: "विकासको क्रममा",
         desc: "लोक सेवा तयारी गर्ने उम्मेदवारहरूका लागि प्रिती फन्टमा आधारित विशेष टाइपिङ वेब एप्लिकेसन।",
         tech: ["JavaScript", "DOM Architecture", "UI/UX"],
         link: "#"
