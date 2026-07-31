@@ -23,7 +23,7 @@ const Timeline = ({ t, isDark }) => {
               <span className={`absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-red-600 ring-4 transition-transform group-hover:scale-125 ${isDark ? 'ring-[#0a0a0a]' : 'ring-neutral-50'}`}></span>
               
               {/* Content */}
-              <span className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${isDark ? 'bg-red-600/10 text-indigo-400' : 'bg-indigo-100 text-red-700'}`}>
+              <span className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${isDark ? 'bg-red-600/10 red-700' : 'bg-indigo-100 text-red-700'}`}>
                 {role.period}
               </span>
               <h4 className="text-xl font-bold mt-4 mb-1">{role.title}</h4>
@@ -59,7 +59,7 @@ const Timeline = ({ t, isDark }) => {
               <span className={`absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-red-600 ring-4 transition-transform group-hover:scale-125 ${isDark ? 'ring-[#0a0a0a]' : 'ring-neutral-50'}`}></span>
               
               {/* Content */}
-              <span className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${isDark ? 'bg-red-600/10 text-indigo-400' : 'bg-indigo-100 text-red-700'}`}>
+              <span className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${isDark ? 'bg-red-600/10 red-700' : 'bg-indigo-100 text-red-700'}`}>
                 {item.period}
               </span>
               <h4 className="text-xl font-bold mt-4 mb-1">{item.degree}</h4>

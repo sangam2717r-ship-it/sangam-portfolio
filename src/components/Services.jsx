@@ -12,7 +12,7 @@ const Services = ({ t, isDark }) => {
               key={idx}
               className={`p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-2 group ${isDark ? 'bg-[#121212] border-neutral-800 hover:border-red-600' : 'bg-white border-neutral-200 shadow-sm hover:border-red-600 hover:shadow-lg'}`}
             >
-              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors ${isDark ? 'bg-red-600/10 text-indigo-400 group-hover:bg-red-600 group-hover:text-white' : 'bg-indigo-100 text-red-700 group-hover:bg-red-700 group-hover:text-white'}`}>
+              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors ${isDark ? 'bg-red-600/10 red-700 group-hover:bg-red-600 group-hover:text-white' : 'bg-indigo-100 text-red-700 group-hover:bg-red-700 group-hover:text-white'}`}>
                 {/* Dynamic Icon rendering based on index */}
                 {idx === 0 ? (
                   <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
