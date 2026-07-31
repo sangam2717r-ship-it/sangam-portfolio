@@ -49,7 +49,7 @@ export const content = {
         },
         {
           title: "Maintenance Engineer",
-          org: "Hotel Operations • Sydney",
+          org: "Ace Hotel Sydney • Atelier Ace",
           period: "2024 - Present",
           desc: "Managing complex physical infrastructure, mechanical systems, and facility operations under high-reliability standards."
         }
@@ -175,7 +175,7 @@ export const content = {
         },
         {
           title: "मर्मतसम्भार इन्जिनियर",
-          org: "होटल अपरेसन • सिड्नी",
+          org: "एस होटल सिड्नी • एटेलेयर एस",
           period: "२०२४ - हाल",
           desc: "उच्च-विश्वसनीयता मापदण्डहरू अन्तर्गत जटिल भौतिक पूर्वाधार, मेकानिकल प्रणालीहरू, र सुविधा सञ्चालनहरू प्रबन्ध गर्दै।"
         }
@@ -222,7 +222,7 @@ export const content = {
       },
       {
         id: 2,
-        title: "AAFAI Rentals",
+        title: "आफै रेन्टल्स",
         category: "फुल-स्ट्याक प्लेटफर्म",
         desc: "सुरक्षित फोटो अपलोड र पूर्ण एडमिन कन्ट्रोलसहितको कमर्सियल रेन्टल प्लेटफर्म।",
         tech: ["React", "Node.js", "Database"],
@@ -230,7 +230,7 @@ export const content = {
       },
       {
         id: 3,
-        title: "TypeShallus",
+        title: "टाइपसालअस्",
         category: "वेब एप्लिकेसन",
         desc: "लोक सेवा तयारी गर्ने उम्मेदवारहरूका लागि प्रिती फन्टमा आधारित विशेष टाइपिङ वेब एप्लिकेसन।",
         tech: ["JavaScript", "DOM Architecture", "UI/UX"],
