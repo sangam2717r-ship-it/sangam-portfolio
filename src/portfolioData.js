@@ -101,7 +101,7 @@ export const content = {
         status: "Ongoing Development",
         desc: "Commercial car rental platform featuring user authentication workflows, secure image upload management, and admin routing.",
         tech: ["React", "Next.js", "Node.js", "Supabase"],
-        link: "#"
+        link: "https://aafai-platform.vercel.app/"
       },
       {
         id: 3,
