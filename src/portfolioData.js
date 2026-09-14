@@ -97,7 +97,7 @@ export const content = {
       {
         id: 2,
         title: "AAFAI Rentals",
-        category: "Full-Stack Platform",
+        category: "Full-Stack Platform(client setup pending - Demo available)",
         status: "Ongoing Development",
         desc: "Commercial car rental platform featuring user authentication workflows, secure image upload management, and admin routing.",
         tech: ["React", "Next.js", "Node.js", "Supabase"],
@@ -225,11 +225,11 @@ export const content = {
       {
         id: 2,
         title: "आफै रेन्टल्स",
-        category: "फुल-स्ट्याक प्लेटफर्म",
+        category: "फुल-स्ट्याक प्लेटफर्म(क्लाइन्ट सेटअप लागि प्रतीक्षा गरिदै - डेमो उपलब्ध)",
         status: "विकासको क्रममा",
         desc: "सुरक्षित फोटो अपलोड र पूर्ण एडमिन कन्ट्रोलसहितको कमर्सियल रेन्टल प्लेटफर्म।",
         tech: ["React", "Next.js", "Node.js", "Supabase"],
-        link: "#"
+        link: "https://aafai-platform.vercel.app/"
       },
       {
         id: 3,
